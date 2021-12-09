@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function validateForm() {
+            var x1 = document.forms["myForm"]["op1"].value;
+            var x2 = document.forms["myForm"]["op2"].value;
+            if (parseFloat(x1).toString() === 'NaN') {
+                alert("需要输入操作数1。");
+                return false;
+            }
+            if (parseFloat(x2).toString() === 'NaN') {
+                alert("需要输入操作数2。");
+                return false;
+            }
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>------------------mongodb操作-------------------------</p>
+    <form name="myForm" action="/input" method="GET">
+        数据1: <input type="text" name="op1"><br>
+        数据2: <input type="text" name="op2"><br>
+        <input type="submit" value="写入" name="submit">
+        <input type="submit" value="读取" name="submit">
+    </form>
+</body>
+
+</html>
